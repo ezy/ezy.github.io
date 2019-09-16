@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Install Virtual Box with Ubuntu 14.04 LTE Install Guest Additions Optional: install ssh so you can use your OSX terminal and remote in Install symfony - sudo curl -LsS https://symfony.com/installer -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04">
+<meta property="og:url" content="http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/index.html">
+<meta property="og:site_name" content="EZRA">
+<meta property="og:description" content="Install Virtual Box with Ubuntu 14.04 LTE Install Guest Additions Optional: install ssh so you can use your OSX terminal and remote in Install symfony - sudo curl -LsS https://symfony.com/installer -">
+<meta property="og:locale" content="en-nz">
+<meta property="og:updated_time" content="2019-09-16T21:30:20.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04">
+<meta name="twitter:description" content="Install Virtual Box with Ubuntu 14.04 LTE Install Guest Additions Optional: install ssh so you can use your OSX terminal and remote in Install symfony - sudo curl -LsS https://symfony.com/installer -">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/ezy-192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/ezy.png">
+          
+        
+    
+    <!-- title -->
+    <title>Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2016/06/01/cant-install-gpg-key/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2016/05/13/in-the-deep/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&text=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&is_video=false&description=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04&body=Check out this article: http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&name=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EZRA</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2016-05-29T22:30:18.000Z" itemprop="datePublished">2016-05-30</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Sketch/">Sketch</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <ol>
+<li>Install Virtual Box with Ubuntu 14.04 LTE</li>
+<li><a href="http://en.ig.ma/notebook/2012/virtualbox-guest-additions-on-ubuntu-server" target="_blank" rel="noopener">Install Guest Additions</a></li>
+<li>Optional: <a href="https://www.quora.com/How-can-I-ssh-into-my-VM-from-the-Mac-OS-X-host" target="_blank" rel="noopener">install ssh so you can use your OSX terminal</a> and remote in</li>
+<li>Install symfony - sudo curl -LsS <a href="https://symfony.com/installer" target="_blank" rel="noopener">https://symfony.com/installer</a> -o /usr/local/bin/symfony</li>
+<li>sudo chmod a+x /usr/local/bin/symfony</li>
+<li>Set timezone, locale and hostname:</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg-reconfigure tzdata</span><br><span class="line">sudo locale-gen en_NZ.UTF-8</span><br><span class="line">sudo vim /etc/hosts</span><br><span class="line">sudo <span class="built_in">echo</span> <span class="string">"web.address"</span> &gt; /etc/hostname</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li><p>Install your dev stack - sudo apt-get install <code>&lt;packages&gt;</code>. Mine is as follows:</p>
+<ol>
+<li>PHP <code>sudo apt-get install mysql-client php5 php5-cli php5-mysql npm nodejs-legacy php5-gmp php5-curl php5-gd php5-mongo php5-fpm php5-dev mcrypt libpcre3-dev php5-mcrypt git openjdk-7-jre-headless curl acl wget ntp ntpdate -y</code></li>
+<li>MySQL server <code>sudo apt-get install mysql-server mysql-client mysql-utilities mysqltuner -y sudo npm -g install less bower</code></li>
+<li>Mongodb <code>sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 echo &quot;deb http://repo.mongodb.org/apt/ubuntu &quot;$(lsb_release -sc)&quot;/mongodb-org/3.0 multiverse&quot; | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list sudo apt-get update sudo apt-get install -y mongodb-org</code></li>
+</ol>
+</li>
+<li><p><a href="https://getcomposer.org/download/" target="_blank" rel="noopener">Install Composer</a></p>
+</li>
+<li><p>Clone your repo into /var/www/ then cd to dir</p>
+</li>
+<li><p>Install symfony dependencies</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Set SYMFONY_ENV to dev, if not yet done</span></span><br><span class="line"><span class="built_in">export</span> SYMFONY_ENV=dev</span><br><span class="line">SYMFONY_ENV=dev composer.phar -o install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Setup your parameters.yml file with the correct settings</p>
+</li>
+<li><p>npm install / bower install if necessary NB - dont forget to set your “path to node” in your parameters file. In my case they were: <code>path_to_node: /usr/bin/node path_to_node_modules: /usr/local/lib/node_modules</code></p>
+</li>
+<li><p>Install your symfony project assets. For me: <code>php app/console assets: install</code></p>
+</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">php app/console assetic:dump</span><br><span class="line">php app/console fos:elastica:populate</span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li>Run your web server. For me: <code>php app``/console server:start</code></li>
+</ol>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&text=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&is_video=false&description=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04&body=Check out this article: http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&title=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/&name=Setting up PHP and Symfony on OSX using VirtualBox Ubuntu 14.04&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyleft 2019 ezra
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3249312-9', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>

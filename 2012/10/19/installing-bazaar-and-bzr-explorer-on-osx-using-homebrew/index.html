@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Just about drove myself insane trying to figure out how to get bazaar explorer installed on OSX (running 10.6 Snow Leopard). I used home brew to install bzr and that worked fine, but then trying to ge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Installing Bazaar and bzr explorer on OSX using Homebrew">
+<meta property="og:url" content="http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/index.html">
+<meta property="og:site_name" content="EZRA">
+<meta property="og:description" content="Just about drove myself insane trying to figure out how to get bazaar explorer installed on OSX (running 10.6 Snow Leopard). I used home brew to install bzr and that worked fine, but then trying to ge">
+<meta property="og:locale" content="en-nz">
+<meta property="og:updated_time" content="2019-09-16T21:30:20.023Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Installing Bazaar and bzr explorer on OSX using Homebrew">
+<meta name="twitter:description" content="Just about drove myself insane trying to figure out how to get bazaar explorer installed on OSX (running 10.6 Snow Leopard). I used home brew to install bzr and that worked fine, but then trying to ge">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/ezy-192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/ezy.png">
+          
+        
+    
+    <!-- title -->
+    <title>Installing Bazaar and bzr explorer on OSX using Homebrew</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2013/04/15/Newsletter-Apr-13/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2012/03/08/Newsletter-Mar-12/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&text=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&is_video=false&description=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Installing Bazaar and bzr explorer on OSX using Homebrew&body=Check out this article: http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&name=Installing Bazaar and bzr explorer on OSX using Homebrew&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#So-here-are-the-instructions-starting-from-scratch"><span class="toc-number">1.</span> <span class="toc-text">So here are the instructions (starting from scratch):</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Installing Bazaar and bzr explorer on OSX using Homebrew
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EZRA</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2012-10-18T23:47:28.000Z" itemprop="datePublished">2012-10-19</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/Misc/">Misc</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Just about drove myself insane trying to figure out how to get bazaar explorer installed on OSX (running 10.6 Snow Leopard). I used home brew to install bzr and that worked fine, but then trying to get the explorer (which doesn’t come bundled with the brew bzr version) was futile.</p>
+<h4 id="So-here-are-the-instructions-starting-from-scratch"><a href="#So-here-are-the-instructions-starting-from-scratch" class="headerlink" title="So here are the instructions (starting from scratch):"></a>So here are the instructions (starting from scratch):</h4><ol>
+<li><a href="http://mxcl.github.com/homebrew/" target="_blank" rel="noopener">Install homebrew</a></li>
+<li>Install python: <code>brew install python</code></li>
+<li>Install bzr: <code>brew install bzr</code></li>
+<li>Install pyqt: <code>brew install pyqt</code> (it will also install dependancies)</li>
+</ol>
+<p>That’s the easy part - now for the bit I got stuck on:</p>
+<ol>
+<li>Download the <a href="http://wiki.bazaar.canonical.com/QBzr" target="_blank" rel="noopener">qbzr</a> and <a href="https://launchpad.net/bzr-explorer/+download" target="_blank" rel="noopener">bzr-explorer</a> binary packages</li>
+<li>Find the folder ~/.bazaar (in your User Home folder)</li>
+<li>Create a new folder called “plugins” if it’s not there already</li>
+<li>Extract both the qbzr and bzr-explorer binary folders and then copy them to the plugins folder you just created</li>
+<li>Run - <code>bzr explorer</code></li>
+</ol>
+<p>As far as I can tell - because homebrew maps the bzr install to the proper directory everything that gets dumped in there should work as per normal. If this isn’t the case for you it may pay to take a look at your <a href="http://cheat.errtheblog.com/s/brew/" target="_blank" rel="noopener">symlinks</a>.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#So-here-are-the-instructions-starting-from-scratch"><span class="toc-number">1.</span> <span class="toc-text">So here are the instructions (starting from scratch):</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&text=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&is_video=false&description=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Installing Bazaar and bzr explorer on OSX using Homebrew&body=Check out this article: http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&title=Installing Bazaar and bzr explorer on OSX using Homebrew"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/&name=Installing Bazaar and bzr explorer on OSX using Homebrew&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyleft 2019 ezra
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3249312-9', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
