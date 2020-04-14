@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ezra.keddell.nz/2020/04/14/Twitch-live-coding-build-plan/</loc>
+    
+    <lastmod>2020-04-14T02:32:04.880Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/</loc>
+    
+    <lastmod>2020-04-07T23:21:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2020/02/03/The-Essential-Roles-You%E2%80%99ve-Never-Heard-Of-for-Successful-Software-Delivery-in-an-Agile-Team/</loc>
+    
+    <lastmod>2020-04-07T23:21:39.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2013/10/19/petone/</loc>
+    
+    <lastmod>2019-09-17T02:29:42.308Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ezra.keddell.nz/2009/01/14/hello-world/</loc>
     
     <lastmod>2019-09-17T02:14:22.662Z</lastmod>
@@ -23,6 +51,76 @@
   </url>
   
   <url>
+    <loc>http://ezra.keddell.nz/2009/07/22/62/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/04/css-editors/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/31/hand-in-2-first-tuesday-back/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/07/28/handin-on-friday/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/04/html-editors-web-page-authoring-tools/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/11/in-class-tasks-110809/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/07/31/portfolio-inspiration/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/10/14/presentation-times-for-friday/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/09/10/project-3-brief-uploaded/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/06/screencast-tumblr-theme-editing/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ezra.keddell.nz/2009/08/14/social-network-links/</loc>
     
     <lastmod>2019-09-17T02:09:26.433Z</lastmod>
@@ -30,7 +128,35 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/lectures/index.html</loc>
+    <loc>http://ezra.keddell.nz/2009/06/26/some-resources/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/14/the-wonderful-world-of-firebug/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/07/tasks-for-today/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/07/17/twitter-and-rss-tutorial/</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2009/08/04/voting-for-tutorials/</loc>
     
     <lastmod>2019-09-17T02:09:26.433Z</lastmod>
     
@@ -51,70 +177,7 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2009/08/04/voting-for-tutorials/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/project-3/index.html</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/07/28/handin-on-friday/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/07/17/twitter-and-rss-tutorial/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/14/the-wonderful-world-of-firebug/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/project-1/index.html</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/31/hand-in-2-first-tuesday-back/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/11/in-class-tasks-110809/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/07/tasks-for-today/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/06/26/some-resources/</loc>
+    <loc>http://ezra.keddell.nz/lectures/index.html</loc>
     
     <lastmod>2019-09-17T02:09:26.433Z</lastmod>
     
@@ -128,7 +191,14 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2009/07/22/62/</loc>
+    <loc>http://ezra.keddell.nz/project-1/index.html</loc>
+    
+    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/project-3/index.html</loc>
     
     <lastmod>2019-09-17T02:09:26.433Z</lastmod>
     
@@ -136,48 +206,6 @@
   
   <url>
     <loc>http://ezra.keddell.nz/project-2/index.html</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/07/31/portfolio-inspiration/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/04/css-editors/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/06/screencast-tumblr-theme-editing/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/09/10/project-3-brief-uploaded/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/10/14/presentation-times-for-friday/</loc>
-    
-    <lastmod>2019-09-17T02:09:26.433Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2009/08/04/html-editors-web-page-authoring-tools/</loc>
     
     <lastmod>2019-09-17T02:09:26.433Z</lastmod>
     
@@ -373,7 +401,7 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2008/06/11/bmw-gina-skin-car/</loc>
+    <loc>http://ezra.keddell.nz/2008/06/29/aaasite-extra/</loc>
     
     <lastmod>2019-09-16T21:58:33.091Z</lastmod>
     
@@ -387,7 +415,7 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2008/04/01/dashboards-and-dashboardes/</loc>
+    <loc>http://ezra.keddell.nz/2008/06/11/bmw-gina-skin-car/</loc>
     
     <lastmod>2019-09-16T21:58:33.091Z</lastmod>
     
@@ -401,14 +429,14 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2008/06/29/aaasite-extra/</loc>
+    <loc>http://ezra.keddell.nz/2008/03/26/cultural-learning-from-olympic-posters-across-the-years/</loc>
     
     <lastmod>2019-09-16T21:58:33.091Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2008/03/26/cultural-learning-from-olympic-posters-across-the-years/</loc>
+    <loc>http://ezra.keddell.nz/2008/04/01/dashboards-and-dashboardes/</loc>
     
     <lastmod>2019-09-16T21:58:33.091Z</lastmod>
     
@@ -436,140 +464,7 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2018/05/01/State-of-Play-May-18/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/06/26/dr-propertylove-or-how-i-learned-to-stop-worrying-and-love-auckland/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/04/08/cmd-del/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2016/06/01/cant-install-gpg-key/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2014/02/21/rough-sleeper/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/05/08/rails-camp-15-presentaion/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2016/05/13/in-the-deep/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2014/07/14/le-tour-avatar/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/09/03/angular-http-get-from-the-console/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/12/15/for-mack-the-dog/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/06/29/hurricanes-supporter-icon/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/05/06/the-design-archive-cl-bob-mainland-tour-07/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/05/19/petone/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/04/17/ezra-and-passionfruit-state-of-play-2015-16/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/06/10/the-kids-are-getting-inline/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2014/09/01/hipster-design/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/10/29/State-of-Play-Oct-15/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2016/01/01/to-the-meter-of-starlight-starbright/</loc>
+    <loc>http://ezra.keddell.nz/2018/07/18/State-of-Play-Jul-18/</loc>
     
     <lastmod>2019-09-16T21:30:20.023Z</lastmod>
     
@@ -583,21 +478,14 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2018/07/18/State-of-Play-Jul-18/</loc>
+    <loc>http://ezra.keddell.nz/2018/05/01/State-of-Play-May-18/</loc>
     
     <lastmod>2019-09-16T21:30:20.023Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/about/index.html</loc>
-    
-    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/05/07/work-fun-timez/</loc>
+    <loc>http://ezra.keddell.nz/2015/10/29/State-of-Play-Oct-15/</loc>
     
     <lastmod>2019-09-16T21:30:20.023Z</lastmod>
     
@@ -611,6 +499,20 @@
   </url>
   
   <url>
+    <loc>http://ezra.keddell.nz/2015/09/03/angular-http-get-from-the-console/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2016/06/01/cant-install-gpg-key/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ezra.keddell.nz/2015/12/16/building-a-company-that-has-legacy/</loc>
     
     <lastmod>2019-09-16T21:30:20.023Z</lastmod>
@@ -618,28 +520,126 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2012/03/08/Newsletter-Mar-12/</loc>
+    <loc>http://ezra.keddell.nz/2015/04/08/cmd-del/</loc>
     
-    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ezra.keddell.nz/2015/04/17/State-of-Play-Apr-15/</loc>
-    
-    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2013/11/14/Newsletter-Nov-13/</loc>
+    <loc>http://ezra.keddell.nz/2015/04/17/ezra-and-passionfruit-state-of-play-2015-16/</loc>
     
-    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2012/02/10/Newsletter-Feb-12/</loc>
+    <loc>http://ezra.keddell.nz/2015/06/26/dr-propertylove-or-how-i-learned-to-stop-worrying-and-love-auckland/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/12/15/for-mack-the-dog/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2014/09/01/hipster-design/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/06/29/hurricanes-supporter-icon/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2016/05/13/in-the-deep/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2012/10/19/installing-bazaar-and-bzr-explorer-on-osx-using-homebrew/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2014/07/14/le-tour-avatar/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/05/08/rails-camp-15-presentaion/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2014/02/21/rough-sleeper/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2016/05/30/setting-symfony-osx-using-virtualbox/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/05/06/the-design-archive-cl-bob-mainland-tour-07/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/06/10/the-kids-are-getting-inline/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2016/01/01/to-the-meter-of-starlight-starbright/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/05/07/work-fun-timez/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/about/index.html</loc>
+    
+    <lastmod>2019-09-16T21:30:20.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2013/04/15/Newsletter-Apr-13/</loc>
     
     <lastmod>2019-09-16T21:30:20.019Z</lastmod>
     
@@ -653,7 +653,28 @@
   </url>
   
   <url>
-    <loc>http://ezra.keddell.nz/2013/04/15/Newsletter-Apr-13/</loc>
+    <loc>http://ezra.keddell.nz/2012/03/08/Newsletter-Mar-12/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2012/02/10/Newsletter-Feb-12/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2013/11/14/Newsletter-Nov-13/</loc>
+    
+    <lastmod>2019-09-16T21:30:20.019Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ezra.keddell.nz/2015/04/17/State-of-Play-Apr-15/</loc>
     
     <lastmod>2019-09-16T21:30:20.019Z</lastmod>
     

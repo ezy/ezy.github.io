@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Good design is always human centered. As developers we are the shepherds of bytes and pixels, binary and exacting, but we are still messy humans. There’s a great saying that “development is the art of">
+<meta name="keywords" content="code,design,javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Design principals behind good folder and code structure">
+<meta property="og:url" content="http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/index.html">
+<meta property="og:site_name" content="EZRA">
+<meta property="og:description" content="Good design is always human centered. As developers we are the shepherds of bytes and pixels, binary and exacting, but we are still messy humans. There’s a great saying that “development is the art of">
+<meta property="og:locale" content="en-nz">
+<meta property="og:updated_time" content="2020-04-07T23:21:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Design principals behind good folder and code structure">
+<meta name="twitter:description" content="Good design is always human centered. As developers we are the shepherds of bytes and pixels, binary and exacting, but we are still messy humans. There’s a great saying that “development is the art of">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/ezy-192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/ezy.png">
+          
+        
+    
+    <!-- title -->
+    <title>Design principals behind good folder and code structure</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2020/04/14/Twitch-live-coding-build-plan/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2020/02/03/The-Essential-Roles-You’ve-Never-Heard-Of-for-Successful-Software-Delivery-in-an-Agile-Team/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&text=Design principals behind good folder and code structure"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&is_video=false&description=Design principals behind good folder and code structure"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Design principals behind good folder and code structure&body=Check out this article: http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&name=Design principals behind good folder and code structure&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Folder-structure"><span class="toc-number">1.</span> <span class="toc-text">Folder structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File-naming"><span class="toc-number">2.</span> <span class="toc-text">File naming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">3.</span> <span class="toc-text">Methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">4.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Design principals behind good folder and code structure
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EZRA</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2020-02-10T06:19:14.000Z" itemprop="datePublished">2020-02-10</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/code/">code</a>, <a class="tag-link" href="/tags/design/">design</a>, <a class="tag-link" href="/tags/javascript/">javascript</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>Good design is always human centered. As developers we are the shepherds of bytes and pixels, binary and exacting, but we are still messy humans. There’s a great saying that “development is the art of introducing bugs to a blank file”. And it’s true that all the problems we encounter in the development cycle, are always because of people. Someone somewhere in our libraries and code, delivered functionality that was imperfect for our current situation. Therefore taking a human centered approach, to the many and varied design patterns in the stack of development, is a key to continued harmony of team and work cycle. The goal, is to have a maintainable (scalable) code base (with good test coverage), that is stable and not too tightly coupled (it can be split into smaller chunks easily).</p>
+<p>So let’s start with describing the only code structure that is right for all teams. The right code structure is the one that makes your team the most productive first. And second, follows any well established patterns and conventions in the existing code base.</p>
+<h2 id="Folder-structure"><a href="#Folder-structure" class="headerlink" title="Folder structure"></a>Folder structure</h2><p>Any new team in a green fields project without a defined architecture (almost everyone IME) will take a bit of time to gel their patterns. And this will depend on the background and preferences of your developers. But a great starting point is to use tried and true patterns that the majority of developers should recognise loosely defined as follows:</p>
+<p><strong>Services (similar to factories):</strong> A constructor for reusable business logic that can be imported across the application to provide a group of methods for common use cases.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> makeCounter = <span class="function">(<span class="params">start = <span class="number">0</span></span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> current = start;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> add = <span class="function">(<span class="params">value = <span class="number">1</span></span>) =&gt;</span> current += value;</span><br><span class="line">  <span class="keyword">const</span> remove = <span class="function">(<span class="params">value = <span class="number">1</span></span>) =&gt;</span> current -= value;</span><br><span class="line">  <span class="keyword">const</span> <span class="keyword">get</span> = () =&gt; current;</span><br><span class="line"></span><br><span class="line">  return &#123; add, remove, <span class="keyword">get</span> &#125;;</span><br><span class="line">&#125;;</span><br><span class="line">const counter = makeCounter(10);</span><br><span class="line"></span><br><span class="line">counter.add() // 11</span><br><span class="line">counter.add() // 12</span><br><span class="line">counter.add(8) // 20</span><br><span class="line">counter.remove(10) // 10</span><br></pre></td></tr></table></figure>
+
+<p><strong>Factories (similar to services):</strong> Similar to a service but typically returns a new object for a specific use case or set of business rules.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> buildUserObj = <span class="function">(<span class="params">firstName, surname</span>) =&gt;</span> (&#123;</span><br><span class="line">  firstName,</span><br><span class="line">  surname,</span><br><span class="line">  fullName: <span class="string">`<span class="subst">$&#123;firstName&#125;</span> <span class="subst">$&#123;surname&#125;</span>`</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p><strong>Maps/Constants:</strong> Fixed properties that persist data state.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> carBrands = &#123;</span><br><span class="line">  bmw: <span class="string">"BMW"</span>,</span><br><span class="line">  mercedes: <span class="string">"Mercedes"</span>,</span><br><span class="line">  alphaRomeo: <span class="string">"Alpha Romeo"</span>,</span><br><span class="line">  tesla: <span class="string">"Amazing"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Controllers:</strong> Core business logic for each module.</p>
+<p><strong>Models/Types:</strong> Describe data structures and used for validating incoming and outgoing data.</p>
+<h2 id="File-naming"><a href="#File-naming" class="headerlink" title="File naming"></a>File naming</h2><p>When naming files, the format is less important than the description. File names are for humans first, and should be descriptive enough to get a clear picture of what to expect from the methods within. From there, whatever convention has been implemented - stick with it as consistency is key. My favourite format is lowercase with hyphens, including the file type:</p>
+<ul>
+<li>file-name-description.map.js</li>
+<li>file-name-description.types.js</li>
+<li>file-name-description.controller.js</li>
+<li>file-name-description.controller.test.js</li>
+</ul>
+<h2 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h2><p>Distinct reusable methods (objects/functions) that can be unit tested with clear input and output bring stability and confidence refactoring. Targeting data patterns or events are both good approaches related to structuring methods. Things to avoid are assuming that everyone thinks the same way as you, and being inflexible in your approach to structuring code. Following existing patterns in the code base, no matter how foreign will ultimately make you a better developer. Be as descriptive as possible in your naming convention:</p>
+<ul>
+<li><code>const save = (d) =&gt; {}</code> bad</li>
+<li><code>const saveFile = (data) =&gt; {}</code> good</li>
+<li><code>const saveFileInPDFFormat = (fileData) =&gt; {}</code> best</li>
+<li><code>const saveFileForExportConvertHTMLToPDFFormat = (inputFileData) =&gt; {}</code> OTT but better than bad</li>
+</ul>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>Humans are the benefactor when it comes to good folder and file design. Remember that code that you wrote 2 weeks ago is code that you’re seeing for the first time. So you’ll be the ultimate benefactor of your own good practice. Always be flexible in your approach, and defer to the team conventions as long as they’re widely accepted internally and externally. The result of a well defined structure is a testable, maintainable, scalable code base. Which makes for happy developers, and enjoyable work.</p>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Folder-structure"><span class="toc-number">1.</span> <span class="toc-text">Folder structure</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#File-naming"><span class="toc-number">2.</span> <span class="toc-text">File naming</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-number">3.</span> <span class="toc-text">Methods</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusion"><span class="toc-number">4.</span> <span class="toc-text">Conclusion</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&text=Design principals behind good folder and code structure"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&is_video=false&description=Design principals behind good folder and code structure"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Design principals behind good folder and code structure&body=Check out this article: http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&title=Design principals behind good folder and code structure"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2020/02/10/Design-principals-behind-a-good-folder-and-code-structure/&name=Design principals behind good folder and code structure&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyleft 2020 ezra
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+    <!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3249312-9', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
