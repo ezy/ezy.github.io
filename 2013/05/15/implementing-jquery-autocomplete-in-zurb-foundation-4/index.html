@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang=en>
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <!-- so meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="Zurb Foundation 4 (4.1.6 as of this post to be specific) is a fantastic non-opinionated framework that is reasonably vanilla out of the box and contains a tonne of brilliant functionality. If you’ve u">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Implementing Jquery Autocomplete in Zurb Foundation 4">
-<meta property="og:url" content="http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;ezra.keddell.nz&#x2F;2013&#x2F;05&#x2F;15&#x2F;implementing-jquery-autocomplete-in-zurb-foundation-4&#x2F;index.html">
 <meta property="og:site_name" content="EZRA">
 <meta property="og:description" content="Zurb Foundation 4 (4.1.6 as of this post to be specific) is a fantastic non-opinionated framework that is reasonably vanilla out of the box and contains a tonne of brilliant functionality. If you’ve u">
-<meta property="og:locale" content="en-nz">
-<meta property="og:image" content="http://c1940652.r52.cf0.rackcdn.com/514b5e31fb4f442f530004e1/Screen-Shot-2013-03-21-at-12.22.52-PM.png">
-<meta property="og:updated_time" content="2019-09-16T23:13:07.686Z">
+<meta property="og:locale" content="en_NZ">
+<meta property="og:image" content="http:&#x2F;&#x2F;c1940652.r52.cf0.rackcdn.com&#x2F;514b5e31fb4f442f530004e1&#x2F;Screen-Shot-2013-03-21-at-12.22.52-PM.png">
+<meta property="article:published_time" content="2013-05-14T23:37:13.000Z">
+<meta property="article:modified_time" content="2019-09-16T23:13:07.686Z">
+<meta property="article:author" content="ezra">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Implementing Jquery Autocomplete in Zurb Foundation 4">
-<meta name="twitter:description" content="Zurb Foundation 4 (4.1.6 as of this post to be specific) is a fantastic non-opinionated framework that is reasonably vanilla out of the box and contains a tonne of brilliant functionality. If you’ve u">
-<meta name="twitter:image" content="http://c1940652.r52.cf0.rackcdn.com/514b5e31fb4f442f530004e1/Screen-Shot-2013-03-21-at-12.22.52-PM.png">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;c1940652.r52.cf0.rackcdn.com&#x2F;514b5e31fb4f442f530004e1&#x2F;Screen-Shot-2013-03-21-at-12.22.52-PM.png">
     
     
         
@@ -40,15 +40,19 @@
     <!-- title -->
     <title>Implementing Jquery Autocomplete in Zurb Foundation 4</title>
     <!-- styles -->
-    <link rel="stylesheet" href="/css/style.css">
+    
+<link rel="stylesheet" href="/css/style.css">
+
     <!-- persian styles -->
     
-      <link rel="stylesheet" href="/css/rtl.css">
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
     
     <!-- rss -->
     
     
-</head>
+<meta name="generator" content="Hexo 4.1.0"></head>
 
 <body class="max-width mx-auto px3 ltr">
     
@@ -66,7 +70,7 @@
          
           <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="http://github.com/ezy">Projects</a></li>
+          <li><a href="http://github.com/ezy" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </span>
@@ -90,21 +94,21 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&text=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&is_video=false&description=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/" target="_blank" rel="noopener"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&text=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&is_video=false&description=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Implementing Jquery Autocomplete in Zurb Foundation 4&body=Check out this article: http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&name=Implementing Jquery Autocomplete in Zurb Foundation 4&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&name=Implementing Jquery Autocomplete in Zurb Foundation 4&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Head-code"><span class="toc-number">1.</span> <span class="toc-text">1. Head code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Body"><span class="toc-number">2.</span> <span class="toc-text">2. Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Javascript-scripts-before-the-body"><span class="toc-number">3.</span> <span class="toc-text">3. Javascript scripts before the /body</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Head-code"><span class="toc-number">1.</span> <span class="toc-text">1. Head code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Body"><span class="toc-number">2.</span> <span class="toc-text">2. Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Javascript-scripts-before-the-body"><span class="toc-number">3.</span> <span class="toc-text">3. Javascript scripts before the &#x2F;body</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -177,27 +181,27 @@
          
           <li><a href="/archives/">Writing</a></li>
          
-          <li><a href="http://github.com/ezy">Projects</a></li>
+          <li><a href="http://github.com/ezy" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Head-code"><span class="toc-number">1.</span> <span class="toc-text">1. Head code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Body"><span class="toc-number">2.</span> <span class="toc-text">2. Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Javascript-scripts-before-the-body"><span class="toc-number">3.</span> <span class="toc-text">3. Javascript scripts before the /body</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Head-code"><span class="toc-number">1.</span> <span class="toc-text">1. Head code</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Body"><span class="toc-number">2.</span> <span class="toc-text">2. Body</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Javascript-scripts-before-the-body"><span class="toc-number">3.</span> <span class="toc-text">3. Javascript scripts before the &#x2F;body</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&text=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&is_video=false&description=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/" target="_blank" rel="noopener"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&text=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&is_video=false&description=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
   <li><a class="icon" href="mailto:?subject=Implementing Jquery Autocomplete in Zurb Foundation 4&body=Check out this article: http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&name=Implementing Jquery Autocomplete in Zurb Foundation 4&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&title=Implementing Jquery Autocomplete in Zurb Foundation 4" target="_blank" rel="noopener"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2013/05/15/implementing-jquery-autocomplete-in-zurb-foundation-4/&name=Implementing Jquery Autocomplete in Zurb Foundation 4&description=" target="_blank" rel="noopener"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -215,7 +219,7 @@
         
         <footer id="footer">
   <div class="footer-left">
-    Copyleft 2020 ezra
+    Copyleft 2021 ezra
   </div>
   <div class="footer-right">
     <nav>
@@ -227,7 +231,7 @@
         
           <li><a href="/archives/">Writing</a></li>
         
-          <li><a href="http://github.com/ezy">Projects</a></li>
+          <li><a href="http://github.com/ezy" target="_blank" rel="noopener">Projects</a></li>
         
       </ul>
     </nav>
@@ -236,13 +240,23 @@
 
     </div>
     <!-- styles -->
+
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
 <link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
 
+
     <!-- jquery -->
+
 <script src="/lib/jquery/jquery.min.js"></script>
+
+
 <script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+
 <script src="/js/main.js"></script>
+
 <!-- search -->
 
 <!-- Google Analytics -->
