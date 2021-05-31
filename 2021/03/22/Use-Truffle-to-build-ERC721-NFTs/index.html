@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PreambleThere’s been an explosion in NFT tokens in the last few months. Saying that, there’s only 200k Solidity devs in the world devving on 2589 projects at time of writing so it’s still really early">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Use Truffle to build ERC721 NFTs">
+<meta property="og:url" content="http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/index.html">
+<meta property="og:site_name" content="EZRA">
+<meta property="og:description" content="PreambleThere’s been an explosion in NFT tokens in the last few months. Saying that, there’s only 200k Solidity devs in the world devving on 2589 projects at time of writing so it’s still really early">
+<meta property="og:locale" content="en_NZ">
+<meta property="article:published_time" content="2021-03-21T23:10:35.000Z">
+<meta property="article:modified_time" content="2021-03-22T03:16:55.229Z">
+<meta property="article:author" content="ezra">
+<meta property="article:tag" content="Ethereum">
+<meta property="article:tag" content="NFT">
+<meta name="twitter:card" content="summary">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/ezy-192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/ezy.png">
+          
+        
+    
+    <!-- title -->
+    <title>Use Truffle to build ERC721 NFTs</title>
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+      
+<link rel="stylesheet" href="/css/rtl.css">
+
+    
+    <!-- rss -->
+    
+    
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2021/05/31/Ember-codemods/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2021/01/22/You-can-t-kill-an-idea-on-the-internet/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&text=Use Truffle to build ERC721 NFTs"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&is_video=false&description=Use Truffle to build ERC721 NFTs"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Use Truffle to build ERC721 NFTs&body=Check out this article: http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&name=Use Truffle to build ERC721 NFTs&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Preamble"><span class="toc-number">1.</span> <span class="toc-text">Preamble</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Links"><span class="toc-number">1.1.</span> <span class="toc-text">Links</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index py4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Use Truffle to build ERC721 NFTs
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">EZRA</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2021-03-21T23:10:35.000Z" itemprop="datePublished">2021-03-22</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fas fa-archive"></i>
+        <a class="category-link" href="/categories/blockchain/">blockchain</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link-link" href="/tags/Ethereum/" rel="tag">Ethereum</a>, <a class="tag-link-link" href="/tags/NFT/" rel="tag">NFT</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="Preamble"><a href="#Preamble" class="headerlink" title="Preamble"></a>Preamble</h1><p>There’s been an explosion in NFT tokens in the last few months. Saying that, there’s only <a href="https://www.freecodecamp.org/news/the-most-popular-programming-languages-used-in-blockchain-development-5133a0a207dc/#:~:text=Solidity%20is%20a%20contract-oriented,is%20estimated%20at%20over%20200%2C000." target="_blank" rel="noopener">200k Solidity devs</a> in the world <a href="https://www.stateofthedapps.com/rankings/platform/ethereum?page=40" target="_blank" rel="noopener">devving on 2589 projects</a> at time of writing so it’s still really early days for the whole space. I’ve been looking at the Ethereum dev language Solidity, it is very similar to Javascript. <a href="https://github.com/ezy/nft-ezy" target="_blank" rel="noopener">I’ve started building out an NFT project</a> and it’s been an enjoyable experience. Solidity feels familiar, and the the way npm is used across the board makes for zero learning curve on the tooling infrastructure. </p>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><p>There’s a few links below that have been useful in this journey:</p>
+<ul>
+<li><a href="https://ethereum.org/en/nft/" target="_blank" rel="noopener">Breakdown of what NFTs are on ethereum.org</a></li>
+<li><a href="https://www.trufflesuite.com" target="_blank" rel="noopener">Truffle suite is a great toolset to get going in Solidity</a></li>
+<li><a href="https://opensea.io" target="_blank" rel="noopener">Opensea is a marketplace that makes selling NFTs easy</a></li>
+<li><a href="https://forum.openzeppelin.com/t/create-an-nft-and-deploy-to-a-public-testnet-using-truffle/2961" target="_blank" rel="noopener">Tutorial 1 for Truffle/Solidity</a></li>
+<li><a href="https://betterprogramming.pub/how-to-create-nfts-with-solidity-4fa1398eb70a" target="_blank" rel="noopener">Tutorial 2 for Truffle/Solidity</a></li>
+<li><a href="https://github.com/PatrickAlphaC/dungeons-and-dragons-nft" target="_blank" rel="noopener">Example NFT project for D&amp;D</a></li>
+</ul>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a target="_blank" rel="noopener" href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Preamble"><span class="toc-number">1.</span> <span class="toc-text">Preamble</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Links"><span class="toc-number">1.1.</span> <span class="toc-text">Links</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&text=Use Truffle to build ERC721 NFTs"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&is_video=false&description=Use Truffle to build ERC721 NFTs"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Use Truffle to build ERC721 NFTs&body=Check out this article: http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&title=Use Truffle to build ERC721 NFTs"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://ezra.keddell.nz/2021/03/22/Use-Truffle-to-build-ERC721-NFTs/&name=Use Truffle to build ERC721 NFTs&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyleft 2021 ezra
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/archives/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="http://github.com/ezy">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+
+    <!-- jquery -->
+
+<script src="/lib/jquery/jquery.min.js"></script>
+
+
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-3249312-9', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
+</body>
+</html>
